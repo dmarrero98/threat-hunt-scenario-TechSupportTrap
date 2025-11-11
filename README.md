@@ -20,7 +20,7 @@ DeviceProcessEvents
 | project TimeGenerated, DeviceName, FileName, FolderPath, ProcessCommandLine, InitiatingProcessFileName, InitiatingProcessAccountName
 | order by DeviceName, TimeGenerated desc
 ```
-SCREENSHOT #1
+<img width="1212" alt="image" src="https://github.com/dmarrero98/threat-hunt-scenario-TechSupportTrap/blob/main/screenshots/screenshot1.png">
 
 ---
 
@@ -35,7 +35,7 @@ DeviceFileEvents
 | sort by TimeGenerated desc 
 | where RequestAccountName == "g4bri3lintern"
 ```
-SCREENSHOT #2
+<img width="1212" alt="image" src="https://github.com/dmarrero98/threat-hunt-scenario-TechSupportTrap/blob/main/screenshots/screenshot2.png">
 
 ---
 
@@ -56,7 +56,8 @@ DeviceProcessEvents
 | project Timestamp, DeviceName, InitiatingProcessFileName, FileName, ProcessId, InitiatingProcessId, ProcessCommandLine, ProbeIndicator
 | order by Timestamp desc
 ```
-SCREENSHOT #3
+
+<img width="1212" alt="image" src="https://github.com/dmarrero98/threat-hunt-scenario-TechSupportTrap/blob/main/screenshots/screenshot3.png">
 
 ---
 
@@ -70,7 +71,7 @@ DeviceEvents
 | where DeviceName == "gab-intern-vm"
 | where ActionType has_any("SensitiveFileRead","ScheduledTaskCreated","wmi","browser")
 ```
-SCREENSHOT #4
+<img width="1212" alt="image" src="https://github.com/dmarrero98/threat-hunt-scenario-TechSupportTrap/blob/main/screenshots/screenshot4.png">
 
 ---
 
@@ -87,7 +88,7 @@ DeviceProcessEvents
 | sort by TimeGenerated desc
 ```
 
-SCREENSHOT #5
+<img width="1212" alt="image" src="https://github.com/dmarrero98/threat-hunt-scenario-TechSupportTrap/blob/main/screenshots/screenshot5.png">
 
 ---
 
@@ -105,7 +106,7 @@ DeviceProcessEvents
 | distinct ProcessCommandLine, InitiatingProcessFileName, FileName, FolderPath
 ```
 
-SCREENSHOT #6
+<img width="1212" alt="image" src="https://github.com/dmarrero98/threat-hunt-scenario-TechSupportTrap/blob/main/screenshots/screenshot6.png">
 
 ---
 
@@ -123,7 +124,7 @@ DeviceNetworkEvents
 | project ActionType, InitiatingProcessParentFileName, RemoteIP, RemotePort, RemoteUrl, InitiatingProcessRemoteSessionDeviceName
 ```
 
-SCREENSHOT #7
+<img width="1212" alt="image" src="https://github.com/dmarrero98/threat-hunt-scenario-TechSupportTrap/blob/main/screenshots/screenshot7.png">
 
 ---
 
@@ -142,7 +143,7 @@ DeviceProcessEvents
 //| distinct ProcessCommandLine, InitiatingProcessParentFileName, FileName, FolderPath
 ```
 
-SCREENSHOT #8
+<img width="1212" alt="image" src="https://github.com/dmarrero98/threat-hunt-scenario-TechSupportTrap/blob/main/screenshots/screenshot8.png">
 
 ---
 
@@ -157,7 +158,7 @@ DeviceProcessEvents
 | where InitiatingProcessCommandLine has_any ("netstat","ipconfig","displaydns", "tasklist")
 ```
 
-SCREENSHOT #9
+<img width="1212" alt="image" src="https://github.com/dmarrero98/threat-hunt-scenario-TechSupportTrap/blob/main/screenshots/screenshot9.png">
 
 ---
 
@@ -174,7 +175,7 @@ DeviceProcessEvents
 | project TimeGenerated, ProcessCommandLine 
 ```
 
-SCREENSHOT #10
+<img width="1212" alt="image" src="https://github.com/dmarrero98/threat-hunt-scenario-TechSupportTrap/blob/main/screenshots/screenshot10.png">
 
 ---
 
@@ -193,7 +194,7 @@ DeviceNetworkEvents
 | project TimeGenerated, ActionType, InitiatingProcessParentFileName, RemoteIP, RemotePort, RemoteUrl, InitiatingProcessRemoteSessionDeviceName
 ```
 
-SCREENSHOT 11
+<img width="1212" alt="image" src="https://github.com/dmarrero98/threat-hunt-scenario-TechSupportTrap/blob/main/screenshots/screenshot11.png">
 
 ---
 
@@ -210,7 +211,7 @@ DeviceFileEvents
 | project TimeGenerated, ActionType, FileName, FolderPath, InitiatingProcessCommandLine, InitiatingProcessFileName, InitiatingProcessParentFileName
  ```
 
-SCREENSHOT 12
+<img width="1212" alt="image" src="https://github.com/dmarrero98/threat-hunt-scenario-TechSupportTrap/blob/main/screenshots/screenshot12.png">
 
 ---
 
@@ -228,7 +229,7 @@ DeviceNetworkEvents
 | project TimeGenerated, ActionType, InitiatingProcessParentFileName, RemoteIP, RemotePort, RemoteUrl, InitiatingProcessRemoteSessionDeviceName
 ```
 
-SCREENSHOT 13
+<img width="1212" alt="image" src="https://github.com/dmarrero98/threat-hunt-scenario-TechSupportTrap/blob/main/screenshots/screenshot13.png">
 
 ---
 
@@ -243,7 +244,7 @@ DeviceEvents
 | where ActionType has_any("SensitiveFileRead","ScheduledTaskCreated","wmi","browser")
 ```
 
-SCREENSHOT 14
+<img width="1212" alt="image" src="https://github.com/dmarrero98/threat-hunt-scenario-TechSupportTrap/blob/main/screenshots/screenshot14.png">
 
 ---
 
@@ -263,7 +264,7 @@ DeviceFileEvents
 | distinct FileName
 ```
 
-SCREENSHOT 15
+<img width="1212" alt="image" src="https://github.com/dmarrero98/threat-hunt-scenario-TechSupportTrap/blob/main/screenshots/screenshot15.png">
 
 ---
 
